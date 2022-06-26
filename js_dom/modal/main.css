@@ -1,0 +1,49 @@
+/* body {
+  background: #ccc;
+}
+body:after {
+  content: "default";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1200px) {
+  body {
+    background: #00b894;
+  }
+
+  body:after {
+    content: "desktop";
+  }
+}
+@media (max-width: 992px) {
+  body {
+    background: #ffeaa7;
+  }
+
+  body:after {
+    content: "laptop";
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background: #e17055;
+  }
+
+  body:after {
+    content: "tablets";
+  }
+}
+@media (max-width: 480px) {
+  body {
+    background: #a29bfe;
+  }
+
+  body:after {
+    content: "phones";
+  }
+} */

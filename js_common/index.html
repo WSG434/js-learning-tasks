@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Layout</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./normalize.css">
+</head>
+
+<body>
+
+<script>
+        
+    // Task 1
+    const string = "Привет! Как дела?";
+    console.log("Task 1 input: "+string);
+
+    function getVowels(a) {
+      let s="";
+      const arr = ["а", "у", "о", "и", "э", "ы", "я", "ю", "е", "ё", "a", "e", "i", "o", "u", "y"];
+      const vowels = new Set(arr);
+
+      a = a.toLocaleLowerCase();
+      // alert(a);
+      for (let i=0; i<a.length; i++)
+        if (vowels.has(a[i])) s+=a[i]+" ";
+      return s;
+    }
+    console.log("Task 1 result: "+getVowels(string));
+
+    // Task 2
+
+    const workers = [
+      {"name":"John","salary":500},
+      {"name":"Mike","salary":1300},
+      {"name":"Linda","salary":1500}];
+
+    console.log("Task 2 input: ");
+    console.log(workers);
+
+    function getWorthyWorkers(a){
+      let b =[];
+      for (let i=0; i<a.length; i++)
+        if (a[i].salary>1000)
+          b.push(a[i].name);
+      return b;
+    }
+
+    console.log("Task 2 result: ");  
+    console.log(getWorthyWorkers(workers));  
+
+    //Task 3
+
+    const path = "/users/download/index.html";
+
+    console.log("Task 3 input: "+path);
+
+    function isHtml(a){
+      let res = a.lastIndexOf('.html') == (a.length-5) ? true : false;
+      return res;
+    }
+
+    console.log("Task 3 result: "+isHtml(path));
+
+    //Task 4
+
+    const mixedArray = [3,13,74,14,66,15,22,4];
+    const isEven = num => { 
+      let a = (num % 2 == 0) ? true : false
+      return a;
+      };
+
+    console.log("Task 4 input: "+mixedArray);
+
+    function filterArray(mixArr, isEven){
+      let a=[];
+        for (let i=0; i<mixArr.length; i++)
+          if (isEven(mixArr[i])) a.push(mixArr[i]);
+        return a;
+      }
+    
+    console.log("Task 4 result: "+filterArray(mixedArray, isEven));
+
+</script>
+
+</body>
+</html>
