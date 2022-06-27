@@ -25,8 +25,9 @@
 
       a = a.toLocaleLowerCase();
       // alert(a);
-      for (let i=0; i<a.length; i++)
+      for (let i=0; i<a.length; i++){
         if (vowels.has(a[i])) s+=a[i]+" ";
+        }
       return s;
     }
     console.log("Task 1 result: "+getVowels(string));
@@ -44,8 +45,9 @@
     function getWorthyWorkers(a){
       let b =[];
       for (let i=0; i<a.length; i++)
-        if (a[i].salary>1000)
+        if (a[i].salary>1000){
           b.push(a[i].name);
+          }
       return b;
     }
 
@@ -59,8 +61,7 @@
     console.log("Task 3 input: "+path);
 
     function isHtml(a){
-      let res = a.lastIndexOf('.html') == (a.length-5) ? true : false;
-      return res;
+      return a.lastIndexOf('.html') == (a.length-5) ? true : false;
     }
 
     console.log("Task 3 result: "+isHtml(path));
@@ -69,16 +70,16 @@
 
     const mixedArray = [3,13,74,14,66,15,22,4];
     const isEven = num => { 
-      let a = (num % 2 == 0) ? true : false
-      return a;
+      return (num % 2 == 0) ? true : false;
       };
 
     console.log("Task 4 input: "+mixedArray);
 
     function filterArray(mixArr, isEven){
       let a=[];
-        for (let i=0; i<mixArr.length; i++)
+        for (let i=0; i<mixArr.length; i++){
           if (isEven(mixArr[i])) a.push(mixArr[i]);
+          }
         return a;
       }
     
